@@ -1,0 +1,19 @@
+x -> NO peligro / NO hay paso 
+0 -> SI peligro / SI hay paso
+
+IDEAS
+- USAR RECURSION
+-Leamoslo de derecha a izquiera para descartar si hay peligro (buscar si ya existe metodo)
+-Leer toda la matriz y descartas camaras con peligro armando una nueva matriz sin peligro par ahorrar pasos
+-Usar treads para ver distintos caminos
+-W OESTE
+
+MISIONES
+1. Leer archivo
+2. Eliminar peligros y rehacer matris
+-----Threads--------
+3. Ciclo que lea pobilidades
+4. Leer toda la matris haber si hay coicidencia opuesta 
+5. Aplicar Recursividad 
+6. En cada recursividad comparar la salida
+7. En cada recursividad imprimir salidas / if camino mas corto.
