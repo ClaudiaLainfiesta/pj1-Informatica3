@@ -10,23 +10,23 @@ public class Maze{
     private int height;
     private int depth;
     private Node[][][] nodes;
-
+    //Devuelve el ancho del mapa.
     public int getWidth(){
         return this.width;
     }
-
+    //Devuelve el alto del mapa.
     public int getHeight(){
         return this.height;
     }
-
+    //Devuelve la profundidad del mapa.
     public int getDepth(){
         return this.depth;
     }
-
+    //Devuelve la cámara ubicada en (x,y,z) es la salida.
     public boolean isExitSpace(int xIndex, int yIndex, int zIndex){
         return this.nodes[xIndex][yIndex][zIndex].isExit;
     }
-
+    //Devuelve un Node, que representa la cámara inicial de la cueva.
     public Node getStartingSpace(){
         return this.nodes[0][0][0];
     }
@@ -62,42 +62,42 @@ public class Maze{
 
         scan.close();
     }
-
+    //Devuelve un Node que representa la cámara de las cuevas a la que ustedes se trasladarían si parten de camaraActual hacia el norte. Si no hay una conexión hacia el norte, devuelve camaraActual.
     public Node moveNorth(Node node){
         if(node.north){
             return this.nodes[node.xIndex][node.yIndex - 1][node.zIndex];
         }
         return node;
     }
-
+    //Devuelve un Node que representa la cámara de las cuevas a la que ustedes se trasladarían si parten de camaraActual hacia el sur. Si no hay una conexión hacia el norte, devuelve camaraActual. 
     public Node moveSouth(Node node){
         if(node.south){
             return this.nodes[node.xIndex][node.yIndex + 1][node.zIndex];
         }
         return node;
     }
-
+    //Devuelve un Node que representa la cámara de las cuevas a la que ustedes se trasladarían si parten de camaraActual hacia el oeste. Si no hay una conexión hacia el norte, devuelve camaraActual. 
     public Node moveWest(Node node){
         if(node.west){
             return this.nodes[node.xIndex - 1][node.yIndex][node.zIndex];
         }
         return node;
     }
-
+    //Devuelve un Node que representa la cámara de las cuevas a la que ustedes se trasladarían si parten de camaraActual hacia el este. Si no hay una conexión hacia el norte, devuelve camaraActual. 
     public Node moveEast(Node node){
         if(node.east){
             return this.nodes[node.xIndex + 1][node.yIndex][node.zIndex];
         }
         return node;
     }
-
+    //Devuelve un Node que representa la cámara de las cuevas a la que ustedes se trasladarían si parten de camaraActual hacia el arriba. Si no hay una conexión hacia el norte, devuelve camaraActual.
     public Node moveUp(Node node){
         if(node.up){
             return this.nodes[node.xIndex][node.yIndex][node.zIndex + 1];
         }
         return node;
     }
-
+    //Devuelve un Node que representa la cámara de las cuevas a la que ustedes se trasladarían si parten de camaraActual hacia el abajo. Si no hay una conexión hacia el norte, devuelve camaraActual. 
     public Node moveDown(Node node){
         if(node.down){
             return this.nodes[node.xIndex][node.yIndex][node.zIndex - 1];
