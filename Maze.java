@@ -108,4 +108,16 @@ public class Maze{
     private void setExitSpace(int xIndex, int yIndex, int zIndex){
         this.nodes[xIndex][yIndex][zIndex].isExit = true;
     }
+
+    //Metodo hecho por nosotros
+    public Node[][][] getNodes() {
+        return this.nodes;
+    }
+
+    public Maze(Node[][][] nodes, int width, int height, int depth) {
+        this.width = width;
+        this.height = height;
+        this.depth = depth;
+        this.nodes = nodes;
+    }
 }
