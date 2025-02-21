@@ -7,7 +7,7 @@ public class Solver{
 
     private String[] caminos;
 
-    public Solver(String[] caminos){
+    public Solver(){
         //Sientase libre de implementar el contructor de la forma que usted lo desee
     }
 
