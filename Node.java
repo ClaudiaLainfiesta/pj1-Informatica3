@@ -1,4 +1,3 @@
-//Attribut isExit (usado node.isExit) devuelve true si el nodo evaluado es la salida de la cueva, y falso si no lo es.
 public class Node{
     private static int nodesCount = 0;
     private int id;
@@ -28,8 +27,23 @@ public class Node{
     public static void resetNodesCount(){
         nodesCount = 0;
     }
-    //devuelve un identificador único que representa el ID de cada camara de la cueva.
+
     public int getId(){
         return this.id;
+    }
+    public int getX(){
+        return this.xIndex;
+    }
+    public int getY(){
+        return this.yIndex;
+    }
+    public int getZ(){
+        return this.zIndex;
+    }
+    public boolean getExit(){
+        return isExit;
+    }
+    public boolean isDanger(){
+        return danger;
     }
 }
